@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculadora</title>
+    <link rel="icon" type="image/webp" href="https://media.istockphoto.com/vectors/vector-calculator-icon-vector-id185365475?k=20&m=185365475&s=612x612&w=0&h=RTABciriXlUKo0foP-51C4hA_hgd14EveQZnPEwFTr8=">
+    <link rel="stylesheet" href="MPP.CSS">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+        function calcular(oper) {
+        
+            var N1 = document.calcul.N1.value;
+            var N2 = document.calcul.N2.value;
+    
+        if (oper == "somar") {
+        var resultado = parseInt(N1) + parseInt(N2);
+        } else {
+        if (oper == "subtrair") {
+            var resultado = N1-N2;
+        } else {
+            if (oper == "multiplicar") {
+                var resultado = N1*N2;
+            } else {
+                var resultado = N1/N2;
+            }
+                 }
+            }
+            document.calcul.resultado.value = resultado;
+    
+             }
+    </script>
+
+</head>
+
+   
+
+<body>
+
+    <form name="calcul" method="post" action="">
+        <h1 class="titulo" >Calculadora</h1>
+    
+        <selection  class= " tecla Funcoes">
+
+            <label for="oper">Selecione a operação:</label>
+            <select name="oper" id="oper">
+                <option value="somar">Somar</option>
+                <option value="subtrair">Subtrair</option>
+                <option value="multiplicar">Multiplifcar</option>
+                <option value="dividir">Dividir</option>
+            </select>
+
+        </selection>
+
+        <div class="NR">
+        <label for="N1"> Número 1 </label>
+        <input id="N1" type="number">
+
+        <label for="N2"> Número 2 </label>
+        <input id="N2" type="number">
+
+        
+        <label for="resultado"> Resultado </label>
+        <input type="text" name="resultado" id="resultado"> 
+
+        <input type="button" value="Calcular" class="botao" onClick="calcular(document.calcul.oper.value)"/>
+
+        </div>
+    </form>
+        
+   </body>
+</html>

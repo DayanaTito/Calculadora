@@ -1,0 +1,30 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.titulo{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+    font-size: bold;
+}
+
+.tecla, .NR{
+    
+    display: grid;
+    padding: 0.5em;
+    width: 300px;
+    gap: 8px;
+    margin: auto;
+}
+
+
+.Soma, .Divisao, .Subtração, .Multiplicacao, .NR{
+    font-size: 20px;
+    text-align: center;    
+}
+
+.input {
+    margin: auto;
+    padding: 5px;
+}
